@@ -459,3 +459,45 @@ svg {
 /* @media screen and (max-width: 425px) {
  
 } */
+
+
+.btn{
+  border: 1px solid var(--color-text);
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin:10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn1{
+  color: var(--color-text);
+}
+
+.btn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: var(--color-background-light);
+  z-index: -1;
+  transition: 0.8s;
+}
+
+.btn1:hover{
+  color: var(--color-text);
+}
+
+.btn1::before{
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+
+.btn1:hover::before{
+  height: 180%;
+}
